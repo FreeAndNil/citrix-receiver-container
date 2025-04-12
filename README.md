@@ -15,7 +15,7 @@ and download the latest version. Place it in `docker/citrix`.
 
 ### 2. Build the container image
 
-```
+```bash
 ./build.sh
 # or
 # podman build -t citrix docker/citrix
@@ -23,7 +23,7 @@ and download the latest version. Place it in `docker/citrix`.
 
 ### 3. Start the container:
 
-```
+```bash
 ./run.sh
 # or
 # podman run --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/X0:/tmp/.X11-unix/X0 -v $XAUTHORITY:/xauth --ipc=host citrix
