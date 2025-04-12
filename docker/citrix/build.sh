@@ -1,1 +1,1 @@
-podman build -t citrix docker/citrix
+podman build -t citrix .
