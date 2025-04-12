@@ -15,4 +15,5 @@ firefox --no-remote -CreateProfile 'User /profile'
 
 cp /prefs.js /profile/prefs.js
 
-exec firefox --no-remote --profile /profile "$@"
+#exec firefox --no-remote --profile /profile "$@"
+exec /opt/Citrix/ICAClient/selfservice
