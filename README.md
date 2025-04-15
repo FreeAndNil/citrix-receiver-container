@@ -11,7 +11,7 @@ on musl based operating systems like VoidLinux or Alpine.
 ### 1. Obtain the debian package
 
 Go to [the citrix download page](https://www.citrix.com/downloads/workspace-app/linux/workspace-app-for-linux-latest.html)
-and download the latest version. Place it in `docker/citrix`.
+and download the latest version. Place it in `.`.
 
 ### 2. Build the container image
 
