@@ -15,5 +15,8 @@ firefox --no-remote -CreateProfile 'User /profile'
 
 cp /prefs.js /profile/prefs.js
 
+mkdir -p /root/.ICAClient/
+touch /root/.ICAClient/.eula_accepted
+
 #exec firefox --no-remote --profile /profile "$@"
 exec /opt/Citrix/ICAClient/selfservice
