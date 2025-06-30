@@ -11,8 +11,6 @@ RUN printf "%s\n" 'APT::Get::Install-Recommends "false";' 'APT::Get::Install-Sug
 	rm /tmp/icaclient_*.deb && \
 	ln -sr /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/ && \
 	c_rehash /opt/Citrix/ICAClient/keystore/cacerts/ && \
-	mkdir -p /root/.ICAClient/ && \
-	touch /root/.ICAClient/.eula_accepted && \
 	xdg-mime default wfica.desktop application/x-ica
 
 COPY entrypoint.sh /
