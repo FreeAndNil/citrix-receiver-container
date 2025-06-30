@@ -1,3 +1,8 @@
+set -x
+# cat /proc/sys/net/ipv4/ip_local_port_range
+PULSE_AUDIO_BRIDGE_PORT="53971"
+LANG=c PULSE_AUDIO_BRIDGE_INDEX="$(pactl load-module module-native-protocol-tcp  port=$PULSE_AUDIO_BRIDGE_PORT auth-ip-acl=127.0.0.1)"
+
 podman run --rm \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix/X0:/tmp/.X11-unix/X0 \
@@ -7,4 +12,8 @@ podman run --rm \
   --hostname citrix-receiver-container \
   --name citrix \
   -e TZ="Europe/Berlin" \
+  --net=host \
+  -e PULSE_SERVER=tcp:127.0.01:$PULSE_AUDIO_BRIDGE_PORT \
   citrix
+
+pactl unload-module $PULSE_AUDIO_BRIDGE_INDEX
