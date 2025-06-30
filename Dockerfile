@@ -4,7 +4,8 @@ COPY icaclient_*.deb /tmp
 
 RUN printf "%s\n" 'APT::Get::Install-Recommends "false";' 'APT::Get::Install-Suggests "false";' >> /etc/apt/apt.conf && \
 	apt update && \
-	DEBIAN_FRONTEND=noninteractive apt install -y firefox-esr xdg-utils /tmp/icaclient_*.deb && \
+	DEBIAN_FRONTEND=noninteractive apt install -y \
+		firefox-esr xdg-utils /tmp/icaclient_*.deb && \
 	rm /tmp/icaclient_*.deb && \
 	ln -sr /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/ && \
 	c_rehash /opt/Citrix/ICAClient/keystore/cacerts/ && \
