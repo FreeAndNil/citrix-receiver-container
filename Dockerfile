@@ -6,6 +6,7 @@ RUN printf "%s\n" 'APT::Get::Install-Recommends "false";' 'APT::Get::Install-Sug
 	apt update && \
 	DEBIAN_FRONTEND=noninteractive apt install -y \
 		nano \
+		pulseaudio \
 		firefox-esr xdg-utils /tmp/icaclient_*.deb && \
 	rm /tmp/icaclient_*.deb && \
 	ln -sr /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/ && \
