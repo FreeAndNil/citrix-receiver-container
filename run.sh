@@ -4,4 +4,6 @@ podman run --rm \
   -v $XAUTHORITY:/xauth \
   -e XAUTHORITY=/xauth \
   --ipc=host \
+  --hostname citrix-receiver-container \
+  --name citrix \
   citrix
