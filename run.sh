@@ -6,4 +6,5 @@ podman run --rm \
   --ipc=host \
   --hostname citrix-receiver-container \
   --name citrix \
+  -e TZ="Europe/Berlin" \
   citrix
