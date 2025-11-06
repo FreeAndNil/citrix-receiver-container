@@ -1,4 +1,4 @@
-FROM debian:11
+FROM debian:13
 
 COPY icaclient_*.deb /tmp
 
@@ -6,6 +6,7 @@ RUN apt update && \
 	DEBIAN_FRONTEND=noninteractive apt install --no-install-recommends -y \
 		firefox-esr \
 		nano \
+		openssl \
 		pulseaudio \
 		xdg-utils \
 		/tmp/icaclient_*.deb && \
