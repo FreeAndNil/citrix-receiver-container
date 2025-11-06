@@ -18,7 +18,8 @@ podman run --rm \
   -e TZ="Europe/Berlin" \
   --net=host \
   -e PULSE_SERVER=tcp:127.0.01:$PULSE_AUDIO_BRIDGE_PORT \
+  -e USE_FIREFOX_FOR_SELFSERVICE \
   -v $ICA_ROOT_HOST:/root/.ICAClient \
-  citrix
+  citrix "$@"
 
 pactl unload-module $PULSE_AUDIO_BRIDGE_INDEX
