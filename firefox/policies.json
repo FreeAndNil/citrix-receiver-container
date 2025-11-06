@@ -1,0 +1,39 @@
+{
+  "policies" : {
+    "DisableTelemetry" : true ,
+    "NoDefaultBookmarks" : true,
+    "SanitizeOnShutdown" : {
+      "Cache" : true,
+      "Cookies" : true,
+      "FormData" : true,
+      "History" : true,
+      "Sessions" : true
+    },
+    "OverrideFirstRunPage" : "",
+    "OverridePostUpdatePage" : "",
+    "OfferToSaveLogins" : false,
+    "PasswordManagerEnabled" : false,
+    "Preferences" : {
+      "extensions.pocket.enabled" : { "Value" : false, "Status" : "locked" },
+      "browser.urlbar.suggest.trending" : { "Value" : false, "Status" : "locked" },
+      "browser.urlbar.suggest.topsites" : { "Value" : false, "Status" : "locked" },
+      "browser.urlbar.suggest.sponsoredTopSites" : { "Value" : false, "Status" : "locked" },
+      "browser.bookmarks.addedImportButton" : { "Value" : false, "Status" : "locked" },
+      "browser.bookmarks.restore_default_bookmarks" : { "Value" : false, "Status" : "locked" },
+      "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features" : { "Value" : false, "Status" : "locked" },
+      "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" : { "Value" : false, "Status" : "locked" },
+      "browser.newtabpage.activity-stream.showSponsored" : { "Value" : false, "Status" : "locked" },
+      "browser.newtabpage.activity-stream.showSponsoredTopSites" : { "Value" : false, "Status" : "locked" },
+      "browser.newtabpage.activity-stream.feeds.telemetry" : { "Value" : false, "Status" : "locked" },
+      "browser.newtabpage.activity-stream.feeds.topsites" : { "Value" : false, "Status" : "locked" },
+      "browser.newtabpage.activity-stream.default.sites" : { "Value" : "", "Status" : "default" },
+      "browser.urlbar.tipShownCount.searchTip_onboard" : { "Value" : 1, "Status" : "default" },
+
+      "browser.tabs.warnOnClose" : { "Value" : true, "Status" : "locked" },
+      "browser.tabs.warnOnCloseOtherTabs" : { "Value" : true, "Status" : "locked" },
+      "browser.sessionstore.warnOnQuit" : { "Value" : true, "Status" : "locked" },
+      "browser.warnOnQuit" : { "Value" : true, "Status" : "locked" },
+      "browser.warnOnQuitShortcut" : { "Value" : true, "Status" : "locked" }
+    }
+  }
+}

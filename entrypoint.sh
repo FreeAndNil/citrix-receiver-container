@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/bash -x
 
 ######################################################################
 # @author      : Enno Boland (mail@eboland.de)
@@ -11,12 +11,14 @@
 #exec dbus-run-session -- firefox "$url" "$@"
 export XAUTHORITY=/xauth
 
-firefox --no-remote -CreateProfile 'User /profile'
-
-cp /prefs.js /profile/prefs.js
-
 mkdir -p /root/.ICAClient/
 touch /root/.ICAClient/.eula_accepted
 
-#exec firefox --no-remote --profile /profile "$@"
-exec /opt/Citrix/ICAClient/selfservice
+if ! [[ -z "${USE_FIREFOX_FOR_SELFSERVICE}" ]]; then
+    mkdir -p /root/Downloads
+    rm /root/Downloads/*.ica 2> /dev/null || true
+
+    exec firefox --no-remote --profile /root/firefox-profile "$@"
+else
+    exec /opt/Citrix/ICAClient/selfservice
+fi
